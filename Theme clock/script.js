@@ -31,15 +31,15 @@ function setTime(){
     const ampm = hours >= 12 ? 'PM' : 'AM'
 
     // 24-hour clock, or the 12-hour am/pm clock -
-    // hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0,11, 0, 360)}deg)`
-    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hours, 0,23, 0, 360)}deg)`
+    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0,11, 0, 360)}deg)`
+    // hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hours, 0,23, 0, 360)}deg)`
 
     minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0,59, 0, 360)}deg)`
     secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0,59, 0, 360)}deg)`
 
     // 24-hour clock, or the 12-hour am/pm clock -
-    timeEl.innerHTML = `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`
-    // timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`
+    // timeEl.innerHTML = `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`
+    timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`
 
     dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
 }
