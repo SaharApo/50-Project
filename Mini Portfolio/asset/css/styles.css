@@ -315,7 +315,7 @@ body.dark-theme{
   display: grid;
   align-items: flex-end;
   padding: 1.5rem 1.25rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 .projects__subtitle,
 .projects__title{
