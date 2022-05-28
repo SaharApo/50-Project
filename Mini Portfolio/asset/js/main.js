@@ -129,7 +129,7 @@ for(let i = 0; i < projects.length; i++) {
     const modal = document.createElement('article')
     modal.classList.add('project__card');
     modal.innerHTML = `
-                     <img src="asset/img/project/${img}" alt="" class="projects__img">
+                     <img src="../Mini%20Portfolio/asset/img/project/${img}" alt="" class="projects__img">
 
                      <div class="projects__modal">
                             <div>
