@@ -71,10 +71,12 @@ const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
         { type: "App", name: "Movie App", image: "movie-app.png", link: "Movie%20App" },
+        { type: "App", name: "Todo List", image: "todo-list.png", link: "Todo%20List" },
         { type: "App", name: "Pokedex", image: "pokedex.png", link: "Pokedex" },
-        { type: "Feature", name: "Custom Range Slider", image: "custom-range-slider.png", link: "Custom%20Range%20Slider" },
-        { type: "Feature", name: "3D Background Boxes", image: "3d-background-boxes.png", link: "3D%20Background%20Boxes" },
         { type: "App", name: "Notes App", image: "notes-app.png", link: "Notes%20App" },
+        { type: "Feature", name: "Custom Range Slider", image: "custom-range-slider.png", link: "Custom%20Range%20Slider" },
+        { type: "Feature", name: "Theme clock", image: "theme-clock.png", link: "Theme%20clock" },
+        { type: "Feature", name: "3D Background Boxes", image: "3d-background-boxes.png", link: "3D%20Background%20Boxes" },
         { type: "Feature", name: "Animated Navigation", image: "animated-navigation.png", link: "Animated%20Navigation" },
         { type: "Feature", name: "Auto Text Effect", image: "auto-text-effect.png", link: "Auto%20Text%20Effect" },
         { type: "App", name: "Hoverboard", image: "hoverboard.png", link: "Hoverboard" },
@@ -114,9 +116,7 @@ const projects = [
         { type: "Feature", name: "Split Landing page", image: "split-landing-page.png", link: "Split%20Landing%20page" },
         { type: "Feature", name: "Sticky Navbar", image: "sticky-navbar.png", link: "Sticky%20Navbar" },
         { type: "Feature", name: "Testimonial Box Switcher", image: "testimonial-box-switcher.png", link: "Testimonial%20Box%20Switcher" },
-        { type: "Feature", name: "Theme clock", image: "theme-clock.png", link: "Theme%20clock" },
         { type: "Feature", name: "Toast Notification", image: "toast-notification.png", link: "Toast%20Notification" },
-        { type: "Feature", name: "Todo List", image: "todo-list.png", link: "Todo%20List" },
         { type: "Feature", name: "verify Account Ui", image: "verify-account-ui.png", link: "verify%20Account%20Ui" }
 ];
 

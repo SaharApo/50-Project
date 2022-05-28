@@ -163,7 +163,7 @@ body.dark-theme{
   justify-content: center;
 }
 .profile__perfil img{
-  width: 75px;
+  width: 90px;
 }
 
 .profile__border{
@@ -482,7 +482,7 @@ display: flex;
     height: 120px;
   }
   .profile__perfil img{
-    width: 90px;
+    width: 100px;
   }
   .profile__profession{
     margin-bottom: 1.5rem;
