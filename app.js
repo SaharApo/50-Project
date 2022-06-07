@@ -6,7 +6,17 @@ var app = express();
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 
-var server = app.listen(80);
+app.listen(80, (err) => {
+            if (err) throw err
+            console.log('> Ready on port '+80)
+        })
+
+        process.on('uncaughtException', err => {
+            console.log('UNCAUGHT EXCEPTION!!! shutting down...');
+            console.log(err.name, err.message);
+            process.exit(1);
+        });
+
 
 // const express = require('express')
 // const next = require('next')
