@@ -6,6 +6,8 @@ var app = express();
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 
+app.get('/healthcheck', (req, res) => res.send('Healthcheck SUCCESS'));
+
 app.listen(80, (err) => {
             if (err) throw err
             console.log('> Ready on port '+80)
