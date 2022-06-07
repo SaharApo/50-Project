@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 
-var server = app.listen(3002);
+var server = app.listen(80);
 
 // const express = require('express')
 // const next = require('next')
