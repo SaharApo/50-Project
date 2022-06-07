@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
 })
 
 
-var port = (process.env.NODE_ENV == 'production') ? process.env.PROD_PORT : process.env.DEV_PORT;
+var port = 80;//(process.env.NODE_ENV == 'production') ? process.env.PROD_PORT : process.env.DEV_PORT;
 server.listen(port, (err) => {
             if (err) throw err
             console.log('> Ready on port '+port)
