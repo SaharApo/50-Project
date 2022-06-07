@@ -1,17 +1,12 @@
-const http = require('http')
-const fs = require('fs')
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
-    fs.createReadStream('index.html').pipe(res)
-})
+var express = require('express');
+var app = express();
+
+//setting middleware
+app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 
-var port = 80;//(process.env.NODE_ENV == 'production') ? process.env.PROD_PORT : process.env.DEV_PORT;
-server.listen(port, (err) => {
-            if (err) throw err
-            console.log('> Ready on port '+port)
-        })
+var server = app.listen(3002);
 
 // const express = require('express')
 // const next = require('next')
