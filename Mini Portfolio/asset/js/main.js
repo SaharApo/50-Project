@@ -69,6 +69,7 @@ sr.reveal('.filters', {delay: 1000})
 /*=============== Add Project  ===============*/
 const projectsModal = document.getElementById('projects')
 const projects = [
+        { type: "Feature", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
         { type: "App", name: "Movie App", image: "movie-app.png", link: "Movie%20App" },
         { type: "App", name: "Todo List", image: "todo-list.png", link: "Todo%20List" },
