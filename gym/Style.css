@@ -14,7 +14,26 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
 .container {
+    background-color: #fff;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 90vw;
+    margin: 0;
+}
+form{
+    height:400px;
+    width: 200px;
+}
+.text{
+
+}
+.type{
+
+}
+
+.submit{
+
 }

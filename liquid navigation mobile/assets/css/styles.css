@@ -167,3 +167,7 @@ a {
     zoom: 1.1;
   }
 }
+
+ul{
+  list-style-type: none;
+}
