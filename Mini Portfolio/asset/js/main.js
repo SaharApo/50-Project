@@ -70,6 +70,7 @@ sr.reveal('.filters', {delay: 1000})
 const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Feature", name: "Dynamic Calendar", image: "dynamic-calender.png", link: "Dynamic%20Calender" },
+        { type: "Feature", name: "Loading Dots", image: "Loading-Dots.png", link: "Loading%Dots" },
         { type: "Feature", name: "Liquid Navigation Menu Indicator", image: "Liquid-Navigation.png", link: "liquid%20navigation%20mobile" },
         { type: "Feature", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
@@ -105,7 +106,7 @@ const projects = [
         { type: "Feature", name: "Incrementing Counter", image: "incrementing-counter.png", link: "Incrementing%20Counter" },
         { type: "Feature", name: "Kinetic Loader", image: "kinetic-loader.png", link: "Kinetic%20Loader" },
         { type: "Feature", name: "Live User Filter", image: "live-user-filter.png", link: "Live%20User%20Filter" },
-        { type: "Feature", name: "Mobile Tab Navigation", image: "mobile-tab-navigation.png", link: "Live%20User%20Filter" },
+        { type: "Feature", name: "Mobile Tab Navigation", image: "mobile-tab-navigation.png", link: "Mobile%20Tab%20Navigation" },
         { type: "Feature", name: "Netflix Navigation", image: "netflix-mobile-navigation.png", link: "Netflix%20Navigation" },
         { type: "Feature", name: "Password Generator", image: "password-generator.png", link: "Password%20Generator" },
         { type: "Feature", name: "Password Strength Backround", image: "password-strength-background.png", link: "Password%20Strength%20Backround" },
