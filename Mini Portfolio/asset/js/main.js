@@ -71,7 +71,7 @@ const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Feature", name: "Dynamic Calendar", image: "dynamic-calender.png", link: "Dynamic%20Calender" },
         { type: "Feature", name: "Loading Dots", image: "Loading-Dots.png", link: "Loading%20Dots" },
-        { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%2" },
+        { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%202" },
         { type: "Feature", name: "Liquid Navigation Menu Indicator", image: "Liquid-Navigation.png", link: "liquid%20navigation%20mobile" },
         { type: "Feature", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
