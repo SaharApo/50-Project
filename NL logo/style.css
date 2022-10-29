@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.main{
+    background-color: white;
+    width: 250px;
+    height: 220px;
+    padding: 30px;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle{
+    background-color: powderblue;
+    margin: 0;
+    width: 50%;
+    height: 40px;
+    border-radius:20px;
+}
+
+.bg-green{
+    background-color: #22c55d;
+}
+.bg-yellow{
+    background-color: #f59e0c;
+}
+.bg-blue{
+    background-color: #3c81f6;
+}
+.bg-red{
+    background-color: #ef4444;
+}
+.bg-pink {
+    background-color: #da46ef;
+}
+.bg-indigo {
+    background-color: #6466f1;
+}
+.ml-1{
+    margin-left: 10px;
+}
+.w-1{
+    width:10%;
+}
+.w-2{
+    width:20%;
+}
+.w-3{
+    width:30%;
+}
+.w-4{
+    width:40%;
+}
+.w-5{
+    width:50%;
+}
+.w-6{
+    width:60%;
+}
+.w-7{
+    width:70%;
+}
+.w-8{
+    width:80%;
+}
+.w-9{
+    width:90%;
+}
+.w-100{
+    width:100%;
+}
