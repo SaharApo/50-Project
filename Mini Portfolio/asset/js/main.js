@@ -71,7 +71,7 @@ const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Feature", name: "Dynamic Calendar", image: "dynamic-calender.png", link: "Dynamic%20Calender" },
         { type: "Feature", name: "Loading Dots", image: "Loading-Dots.png", link: "Loading%20Dots" },
-        { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%202" },
+        { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%202" }, // 29/10
         { type: "Feature", name: "Liquid Navigation Menu Indicator", image: "Liquid-Navigation.png", link: "liquid%20navigation%20mobile" },
         { type: "Feature", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
@@ -125,6 +125,7 @@ const projects = [
         { type: "Feature", name: "verify Account Ui", image: "verify-account-ui.png", link: "verify%20Account%20Ui" }
 ];
 
+
 for(let i = 0; i < projects.length; i++) {
     const platform = projects[i].type
     const website_name = projects[i].name
@@ -150,3 +151,11 @@ for(let i = 0; i < projects.length; i++) {
     projectsModal.appendChild(modal)
 
 }
+/*=============== number Of Project LIGHT THEME ===============*/
+
+const updateNumber = () => {
+    // passing slider value as counter text
+    document.getElementById('project__num').innerHTML = projects.length;
+}
+
+updateNumber();
