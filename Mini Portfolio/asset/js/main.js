@@ -69,6 +69,7 @@ sr.reveal('.filters', {delay: 1000})
 /*=============== Add Project  ===============*/
 const projectsModal = document.getElementById('projects')
 const projects = [
+        { type: "Feature", name: "Glass Login Form", image: "Glass-loging-form.png", link: "Glass%20login%20form" },
         { type: "Feature", name: "Dynamic Calendar", image: "dynamic-calender.png", link: "Dynamic%20Calender" },
         { type: "Feature", name: "Loading Dots", image: "Loading-Dots.png", link: "Loading%20Dots" },
         { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%202" }, // 29/10
