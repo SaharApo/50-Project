@@ -11,6 +11,9 @@
     <title>My Project</title>
 </head>
 
+<!--https://dribbble.com/shots/14709020-Calculator-->
+<!-- todo:need to finish this-->
+
 <body>
     <h1>Mobile phone Calculator</h1>
 
@@ -28,36 +31,50 @@
             </div>
 
             <div class="display-mode">
-                <button><i class='bx bx-sun' ></i></button>
-                <button><i class='bx bx-moon' ></i></button>
+                <button id="aaa"><i class='bx bx-sun aaa' ></i></button>
+                <button id="bbb"><i class='bx bx-moon bbb' ></i></button>
             </div>
 
             <div class="outcome">
-                <div class="calculation">308 * 42</div>
+                <div class="calculation">308 x 42</div>
                 <div class="result">12,983</div>
             </div>
 
-            <div class="input">
-                <button data-all-clear class="span-two">AC</button>
-                <button data-delete>DEL</button>
-                <button data-operation>÷</button>
-                <button data-number>1</button>
-                <button data-number>2</button>
-                <button data-number>3</button>
-                <button data-operation>*</button>
-                <button data-number>4</button>
-                <button data-number>5</button>
-                <button data-number>6</button>
-                <button data-operation>+</button>
-                <button data-number>7</button>
-                <button data-number>8</button>
-                <button data-number>9</button>
-                <button data-operation>-</button>
-                <button data-number>.</button>
-                <button data-number>0</button>
-                <button data-equals class="span-two">=</button>
-            </div>
-        </div>
+
+                <div class="input">
+                    <div class="row-1 space">
+                        <button class="c-2 t-b bt">AC</button>
+                        <button class="c-2 t-b bt"><i class='bx bx-undo'></i></button>
+                        <button class="c-2 t-b bt">℅</button>
+                        <button class="c-3 t-w bt">÷</button>
+                    </div>
+    <!--                ➗✖️➖➕⁒-->
+                    <div class="row-2 space">
+                        <button  class="c-1 t-w bt">7</button>
+                        <button class="c-1 t-w bt">8</button>
+                        <button class="c-1 t-w bt">9</button>
+                        <button class="c-3 t-w bt">x</button>
+                    </div>
+
+                    <div class="row-3 space">
+                        <button class="c-1 t-w bt">4</button>
+                        <button class="c-1 t-w bt">5</button>
+                        <button class="c-1 t-w bt" >6</button>
+                        <button class="c-3 t-w bt">-</button>
+                    </div>
+
+                    <div class="row-4 space">
+                        <button class="c-1 t-w bt">1</button>
+                        <button class="c-1 t-w bt">2</button>
+                        <button class="c-1 t-w bt">3</button>
+                        <button class="c-3 t-w bt">+</button>
+                    </div>
+                    <div class="row-5 space">
+                        <button class="c-1 t-w bt-2">0</button>
+                        <button class="c-1 t-w bt">.</button>
+                        <button class="c-3 t-w bt">=</button>
+                    </div>
+                </div>
 
 
     <script src="script.js"></script>
