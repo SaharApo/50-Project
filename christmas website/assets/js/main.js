@@ -51,7 +51,7 @@ window.addEventListener('scroll', scrollUp)
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () => {
+const scrollActive = () =>{
     const scrollY = window.pageYOffset
 
     sections.forEach( current =>{
