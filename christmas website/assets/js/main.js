@@ -1,7 +1,7 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+    navClose = document.getElementById('nav-close');
 
 /*========= Menu Show =========*/
 /* Validate if constant exists */
@@ -72,9 +72,29 @@ window.addEventListener('scroll', scrollActive)
 
 
 /*=============== PARALLAX ===============*/
-
+var parallax = new Rellax('.parallax');
 
 /*=============== GSAP ANIMATION ===============*/
-
+gsap.from('.home__village', 1.2, {opacity: 0, y: 100, delay: .1})
+gsap.from('.home__pine', 1.2, {opacity: 0, y: 150, delay: .3})
+gsap.from('.home__mountain-2', 1.2, {opacity: 0, x: 150, delay: .5})
+gsap.from('.home__mountain-3', 1.2, {opacity: 0, x: -150, delay: .6})
+gsap.from('.home__mountain-1', 1.2, {opacity: 0, y: 250, delay: .7})
+gsap.from('.home__moon', 1.2, {opacity: 0, y: 200, delay: .8})
+gsap.from('.home__trineo', 1.2, {opacity: 0, x: -200, delay: .8})
+gsap.from('.home__title', 1.2, {opacity: 0, y: -60, delay: 1})
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+})
+
+sr.reveal('.about__data, .celebrate__img', {origin: 'right'})
+sr.reveal('.about__img, .celebrate__data', {origin: 'left'})
+sr.reveal('.about__card', {interval: 100})
+sr.reveal('.footer')
+
+

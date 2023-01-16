@@ -69,13 +69,14 @@ sr.reveal('.filters', {delay: 1000})
 /*=============== Add Project  ===============*/
 const projectsModal = document.getElementById('projects')
 const projects = [
+        { type: "Landing Page", name: "Christmas Website", image: "ChristmasWebsite.png", link: "Christmas%20Website" },
         { type: "Feature", name: "Color Picker Chrome Extension", image: "Color-Picker-Chrome-.jpg", link: "Color%20Picker%20extension" },
         { type: "Feature", name: "Glass Login Form", image: "Glass-loging-form.png", link: "Glass%20login%20form" },
         { type: "Feature", name: "Dynamic Calendar", image: "dynamic-calender.png", link: "Dynamic%20Calender" },
         { type: "Feature", name: "Loading Dots", image: "Loading-Dots.png", link: "Loading%20Dots" },
         { type: "Feature", name: "Random Password Generator 2", image: "Random-Password-Generator-2.png", link: "Random%20Password%20Generator%202" }, // 29/10
         { type: "Feature", name: "Liquid Navigation Menu Indicator", image: "Liquid-Navigation.png", link: "liquid%20navigation%20mobile" },
-        { type: "Feature", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
+        { type: "Landing Page", name: "Responsive juice Website", image: "ResponsiveJuiceWebsite.png", link: "responsive%20juice%20website%20main" },
         { type: "Game", name: "Insect Catch", image: "insect-catch-game.png", link: "Insect%20Catch%20Game" },
         { type: "App", name: "Movie App", image: "movie-app.png", link: "Movie%20App" },
         { type: "App", name: "Todo List", image: "todo-list.png", link: "Todo%20List" },
