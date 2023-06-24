@@ -70,6 +70,7 @@ sr.reveal('.filters', {delay: 1000})
 const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Feature", name: "Random Color Palette Generator", image: "Create-A-Random-Color-Palette-Generator-in-HTML-CSS-JavaScript.jpg", link: "Random%20Color%20Palette%20Generator" },
+        { type: "Feature", name: "Responsive Dropdown Menun", image: "responsive-dropdown-menu.png", link: "Responsive%20Dropdown%20Menu" },
         { type: "Feature", name: "Drag and Drop Sortable List", image: "Drag-and-Drop-Sortable-List.jpg", link: "Drag%20and%20Drop%20Sortable%20List" },
         { type: "Feature", name: "Color Picker Chrome Extension", image: "Color-Picker-Chrome-.jpg", link: "Color%20Picker%20extension" },
         { type: "Feature", name: "Glass Login Form", image: "Glass-loging-form.png", link: "Glass%20login%20form" },
