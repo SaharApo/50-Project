@@ -1,5 +1,5 @@
 # How to upload a new content 
-## [Watch it on youtube](https://youtu.be/0FF6yY0lgjY)
+## [Watch it live](https://www.saharapo.com/)
 
 ### Upload a new project:
 
