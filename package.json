@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "ENVIRONMENT=local node app.js",
     "build": "tailwindcss -i ./Tailwind/input.css -o /Users/saharapo/Sites/50 projects/css/main.css ",
     "watch": "tailwindcss -i ./Tailwind/input.css -o /Users/saharapo/Sites/50 projects/css/main.css --watch"
   },

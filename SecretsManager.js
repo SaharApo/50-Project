@@ -1,5 +1,3 @@
-require('dotenv').config({ path: '.env.local' })
-
 class SecretsManager
 {
     constructor() {

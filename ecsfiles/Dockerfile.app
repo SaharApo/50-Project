@@ -43,6 +43,8 @@ ENV TZ="America/New_York"
 
 RUN service ssh start
 
+ENV ENVIRONMENT production
+
 ARG STG_ROOT_PW
 RUN mkdir -p /var/log/supervisor
 # RUN mkdir /var/run/sshd
