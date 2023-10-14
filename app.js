@@ -24,8 +24,6 @@ app.post('/generate',cors(),jsonParser, async (req, res) => {
     console.log(`Generating ${n} images for ${prompt}`);
     console.log("Getting secret API key...");
 
-    let secretsmanaasdasdger = new SecretsManagerasdasds();
-
     try{
         // 1 - Get the secret from AWS
         let secretsmanager = new SecretsManager();
