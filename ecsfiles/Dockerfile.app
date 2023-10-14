@@ -9,11 +9,6 @@ COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
 RUN npm install
 
-ARG SecretsManager_ACCESS
-ENV SecretsManager_ACCESS=$SecretsManager_ACCESS
-
-RUN echo "here:$SecretsManager_ACCESS"
-
 FROM node:14 AS runner
 WORKDIR /app
 ENV NODE_ENV production
@@ -58,6 +53,11 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 
 # ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
+
+ARG SecretsManager_ACCESS
+ENV SecretsManager_ACCESS=$SecretsManager_ACCESS
+
+RUN echo "here:$SecretsManager_ACCESS"
 
 RUN npm install -g @socket.io/pm2
 
