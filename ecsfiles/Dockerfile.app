@@ -43,6 +43,8 @@ ENV TZ="America/New_York"
 
 RUN service ssh start
 
+ENV ENVIRONMENT production
+
 ARG STG_ROOT_PW
 RUN mkdir -p /var/log/supervisor
 # RUN mkdir /var/run/sshd
@@ -54,6 +56,8 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 
 # ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
+
+RUN npm install -g @socket.io/pm2
 
 ENV PM2_PUBLIC_KEY nd7kiqiar58t5dm
 ENV PM2_SECRET_KEY ty17o97kplwwug1

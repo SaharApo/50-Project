@@ -1,3 +1,5 @@
+require("dotenv").config({ path: `.env.${process.env.ENVIRONMENT}` });
+
 var cors = require('cors')
 var fetch = require('node-fetch')
 
@@ -14,7 +16,6 @@ var jsonParser = bodyParser.json()
 
 app.options('*', cors());
 
-
 app.get('/healthcheck', (req, res) => res.send('Healthcheck SUCCESS'));
 app.post('/generate',cors(),jsonParser, async (req, res) => {
 
@@ -22,40 +23,45 @@ app.post('/generate',cors(),jsonParser, async (req, res) => {
 
     console.log(`Generating ${n} images for ${prompt}`);
     console.log("Getting secret API key...");
-    // 1 - Get the secret from AWS
-    let secretsmanager = new SecretsManager();
-    let mysecret = await secretsmanager.getData("SAHAR_OPENAPI");
 
-    console.log("Generated images..")
-    // 2 - Use the API Key to send a request to the OpenAi API to generate images based on user inputs
-    const response = await fetch("https://api.openai.com/v1/images/generations", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${mysecret}`
-        },
-        body: JSON.stringify({
-            prompt: prompt,
-            n: parseInt(n),
-            size: "512x512",
-            response_format: "b64_json"
-        })
-    });
-    if (!response.ok) throw new Error('Failed to generate images! Please try again.');
+    try{
+        // 1 - Get the secret from AWS
+        let secretsmanager = new SecretsManager();
+        let mysecret = await secretsmanager.getData("SAHAR_OPENAPI");
 
-    const {data} = await response.json();  // get data from response
+        console.log("Generated images..")
+        // 2 - Use the API Key to send a request to the OpenAi API to generate images based on user inputs
+        const response = await fetch("https://api.openai.com/v1/images/generations", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${mysecret}`
+            },
+            body: JSON.stringify({
+                prompt: prompt,
+                n: parseInt(n),
+                size: "512x512",
+                response_format: "b64_json"
+            })
+        });
+        if (!response.ok) throw new Error('Failed to generate images! Please try again.');
 
-    console.log("DONE");
+        const {data} = await response.json();  // get data from response
 
-    // 3 - Return the images to the client
-    res.status(200).json({data:data});
+        console.log("DONE");
+
+        // 3 - Return the images to the client
+        res.status(200).json({data:data});
+    }catch (e) {
+        console.log(e);
+        res.status(500).json({error:e});
+    }
 });
 
-let PORT = 80;
-
+let PORT = 3004;
 app.listen(PORT, (err) => {
             if (err) throw err
-            console.log('> Ready on port '+PORT)
+            console.log(`> Ready on port ${PORT} for environment ${process.env.ENVIRONMENT}`)
         })
 
 
