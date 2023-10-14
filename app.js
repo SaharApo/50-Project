@@ -24,6 +24,8 @@ app.post('/generate',cors(),jsonParser, async (req, res) => {
     console.log(`Generating ${n} images for ${prompt}`);
     console.log("Getting secret API key...");
 
+    let secretsmanaasdasdger = new SecretsManagerasdasds();
+
     try{
         // 1 - Get the secret from AWS
         let secretsmanager = new SecretsManager();
@@ -58,18 +60,18 @@ app.post('/generate',cors(),jsonParser, async (req, res) => {
     }
 });
 
-let PORT = 3004;
+let PORT = process.env.PORT;
 app.listen(PORT, (err) => {
             if (err) throw err
             console.log(`> Ready on port ${PORT} for environment ${process.env.ENVIRONMENT}`)
         })
 
 
-        process.on('uncaughtException', err => {
-            console.log('UNCAUGHT EXCEPTION!!! shutting down...');
-            console.log(err.name, err.message);
-            process.exit(1);
-        });
+process.on('uncaughtException', err => {
+    // console.log('UNCAUGHT EXCEPTION!!! shutting down...');
+    console.log(err.name, err.message);
+    // process.exit(1);
+});
 
 
 // const express = require('express')
