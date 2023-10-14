@@ -69,7 +69,7 @@ sr.reveal('.filters', {delay: 1000})
 /*=============== Add Project  ===============*/
 const projectsModal = document.getElementById('projects')
 const projects = [
-        { type: "Feature", name: "AI Image Generation", image: "AI-Image-Generator.jpg", link: "Ai%20Image%20Generation" },
+        { type: "Feature", name: "AI Image Generation", image: "AI-Image-Generator.jpg", link: "AI%20Image%20Generation" },
         { type: "Feature", name: "Camping Website", image: "Camping-Website.png", link: "Camping%20Website" },
         { type: "Feature", name: "Random Color Palette Generator", image: "Create-A-Random-Color-Palette-Generator-in-HTML-CSS-JavaScript.jpg", link: "Random%20Color%20Palette%20Generator" },
         { type: "Feature", name: "Responsive Dropdown Menu", image: "responsive-dropdown-menu.png", link: "Responsive%20Dropdown%20Menu" },
