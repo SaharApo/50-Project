@@ -7,7 +7,7 @@ const generateImages = async (userPrompt, userImageQuantity) => {
     // send a request to the OpenAi API to generate images based on user inputs
 
     // In local development, change between these URLs:
-    const response = await fetch("https://saharapo.com/generate", {
+    const response = await fetch("https://www.saharapo.com/generate", {
         // const response = await fetch("http://localhost:3004/generate", {
         method: "POST",
         headers: {
@@ -24,6 +24,8 @@ const generateImages = async (userPrompt, userImageQuantity) => {
     if (!response.ok) throw new Error('Failed to generate images! Please try again.');
 
     const resp = await response.json();  // get data from response
+
+    isImageGenerating = false;
 
     let data = resp.data;
     updateImageCard([...data]);

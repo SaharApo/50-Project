@@ -12,19 +12,19 @@ var app = express();
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 // create application/json parser
-var jsonParser = bodyParser.json()
+var jsonParser = bodyParser.json({limit: '20mb'})
 
 app.options('*', cors());
 
-app.get('/healthcheck', (req, res) => res.send('Healthcheck SUCCESS'));
+app.get('/healthcheck', (req, res) => {
+    res.send('Healthcheck SUCCESS')
+});
 app.post('/generate',cors(),jsonParser, async (req, res) => {
 
     let {prompt,n} = req.body;
 
     console.log(`Generating ${n} images for ${prompt}`);
     console.log("Getting secret API key...");
-
-    let secretsmanaasdasdger = new SecretsManagerasdasds();
 
     try{
         // 1 - Get the secret from AWS
