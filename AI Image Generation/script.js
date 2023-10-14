@@ -25,6 +25,8 @@ const generateImages = async (userPrompt, userImageQuantity) => {
 
     const resp = await response.json();  // get data from response
 
+    isImageGenerating = false;
+
     let data = resp.data;
     updateImageCard([...data]);
 }

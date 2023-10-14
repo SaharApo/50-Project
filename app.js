@@ -12,12 +12,12 @@ var app = express();
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
 // create application/json parser
-var jsonParser = bodyParser.json()
+var jsonParser = bodyParser.json({limit: '20mb'})
 
 app.options('*', cors());
 
 app.get('/healthcheck', (req, res) => {
-    console.log("HEALTH")
+    console.log("HEALTH");
     res.send('Healthcheck SUCCESS')
 });
 app.post('/generate',cors(),jsonParser, async (req, res) => {
