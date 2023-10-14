@@ -1,17 +1,61 @@
+var cors = require('cors')
+var fetch = require('node-fetch')
 
 var express = require('express');
+var SecretsManager = require('./SecretsManager');
+const bodyParser = require("body-parser");
 var app = express();
 
 //setting middleware
 app.use(express.static(__dirname + '')); //Serves resources from public folder
 
+// create application/json parser
+var jsonParser = bodyParser.json()
+
+app.options('*', cors());
 
 
 app.get('/healthcheck', (req, res) => res.send('Healthcheck SUCCESS'));
+app.post('/generate',cors(),jsonParser, async (req, res) => {
 
-app.listen(80, (err) => {
+    let {prompt,n} = req.body;
+
+    console.log(`Generating ${n} images for ${prompt}`);
+    console.log("Getting secret API key...");
+    // 1 - Get the secret from AWS
+    let secretsmanager = new SecretsManager();
+    let mysecret = await secretsmanager.getData("SAHAR_OPENAPI");
+
+    console.log("Generated images..")
+    // 2 - Use the API Key to send a request to the OpenAi API to generate images based on user inputs
+    const response = await fetch("https://api.openai.com/v1/images/generations", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${mysecret}`
+        },
+        body: JSON.stringify({
+            prompt: prompt,
+            n: parseInt(n),
+            size: "512x512",
+            response_format: "b64_json"
+        })
+    });
+    if (!response.ok) throw new Error('Failed to generate images! Please try again.');
+
+    const {data} = await response.json();  // get data from response
+
+    console.log("DONE");
+
+    // 3 - Return the images to the client
+    res.status(200).json({data:data});
+});
+
+let PORT = 80;
+
+app.listen(PORT, (err) => {
             if (err) throw err
-            console.log('> Ready on port '+80)
+            console.log('> Ready on port '+PORT)
         })
 
 

@@ -1,8 +1,29 @@
 const generateForm = document.querySelector('.generate-form');
 const imageGallery = document.querySelector('.image-gallery');
 
-const OPENAI_API_KEY = '';
 let isImageGenerating = false;
+
+const generateImages = async (userPrompt, userImageQuantity) => {
+    // send a request to the OpenAi API to generate images based on user inputs
+    const response = await fetch("http://localhost:3001/generate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            prompt: userPrompt,
+            n: parseInt(userImageQuantity),
+        })
+    });
+
+    if (!response.ok) throw new Error('Failed to generate images! Please try again.');
+
+    const resp = await response.json();  // get data from response
+
+    let data = resp.data;
+    updateImageCard([...data]);
+}
+
 
 const updateImageCard = (imgDataArray) => {
     imgDataArray.forEach((imgObject, index) => {
@@ -24,38 +45,7 @@ const updateImageCard = (imgDataArray) => {
     });
 }
 
-
-const generateAiImages = async (userPrompt, userImageQuantity) => {
-    try {
-        // send a request to the OpenAi API to generate images based on user inputs
-        const response = await fetch("https://api.openai.com/v1/images/generations", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${OPENAI_API_KEY}`
-            },
-            body: JSON.stringify({
-                prompt: userPrompt,
-                n: parseInt(userImageQuantity),
-                size: "512x512",
-                response_format: "b64_json"
-            })
-        });
-
-        if (!response.ok) throw new Error('Failed to generate images! Please try again.');
-        
-        const { data} = await response.json();  // get data from response
-        updateImageCard([...data]);
-    } catch (error) {
-        alert(error.message);
-    } finally {
-        isImageGenerating = false;
-    }
-}
-
-
-
-const  handleFormSubmission = (e) => {
+const  handleFormSubmission = async (e) => {
     e.preventDefault();
     if (isImageGenerating) return;
     isImageGenerating = true;
@@ -75,7 +65,8 @@ const  handleFormSubmission = (e) => {
     ).join("");
 
     imageGallery.innerHTML = imgCardMarkup;
-    generateAiImages(userPrompt, userImageQuantity);
+
+    generateImages(userPrompt, userImageQuantity);
 }
 
 generateForm.addEventListener('submit', handleFormSubmission);
