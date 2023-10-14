@@ -5,7 +5,7 @@ let isImageGenerating = false;
 
 const generateImages = async (userPrompt, userImageQuantity) => {
     // send a request to the OpenAi API to generate images based on user inputs
-    const response = await fetch("http://localhost:3001/generate", {
+    const response = await fetch("https://saharapo.com/generate", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
