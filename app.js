@@ -16,7 +16,10 @@ var jsonParser = bodyParser.json()
 
 app.options('*', cors());
 
-app.get('/healthcheck', (req, res) => res.send('Healthcheck SUCCESS'));
+app.get('/healthcheck', (req, res) => {
+    console.log("HEALTH")
+    res.send('Healthcheck SUCCESS')
+});
 app.post('/generate',cors(),jsonParser, async (req, res) => {
 
     let {prompt,n} = req.body;
