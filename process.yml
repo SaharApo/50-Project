@@ -1,0 +1,3 @@
+apps:
+  - name     : 'SaharAPI'
+    script   : ./app.js
