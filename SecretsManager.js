@@ -4,7 +4,7 @@ class SecretsManager
         let key = "";
         let secret = "";
 
-        console.log("---",process.env.SecretsManager_ACCESS);
+        console.log("---",process.env);
 
         let SecretsManagerSecurityCredentials = process.env.SecretsManager_ACCESS;
         SecretsManagerSecurityCredentials = JSON.parse(SecretsManagerSecurityCredentials)

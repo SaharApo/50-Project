@@ -12,6 +12,8 @@ RUN npm install
 ARG SecretsManager_ACCESS
 ENV SecretsManager_ACCESS=$SecretsManager_ACCESS
 
+RUN echo "here:$SecretsManager_ACCESS"
+
 FROM node:14 AS runner
 WORKDIR /app
 ENV NODE_ENV production
