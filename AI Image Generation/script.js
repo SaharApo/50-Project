@@ -14,6 +14,8 @@ const generateImages = async (userPrompt, userImageQuantity) => {
         body: JSON.stringify({
             prompt: userPrompt,
             n: parseInt(userImageQuantity),
+            size: "512x512",
+            response_format: "b64_json"
         })
     });
 
