@@ -70,6 +70,7 @@ sr.reveal('.filters', {delay: 1000})
 const projectsModal = document.getElementById('projects')
 const projects = [
         { type: "Feature", name: "AI Image Generation", image: "AI-Image-Generator.jpg", link: "AI%20Image%20Generation" },
+        { type: "Game", name: "Snake Game", image: "Snake_Game.jpg", link: "Snake%20Game" },
         { type: "Feature", name: "Camping Website", image: "Camping-Website.png", link: "Camping%20Website" },
         { type: "Feature", name: "Random Color Palette Generator", image: "Create-A-Random-Color-Palette-Generator-in-HTML-CSS-JavaScript.jpg", link: "Random%20Color%20Palette%20Generator" },
         { type: "Feature", name: "Responsive Dropdown Menu", image: "responsive-dropdown-menu.png", link: "Responsive%20Dropdown%20Menu" },
@@ -162,7 +163,7 @@ for(let i = 0; i < projects.length; i++) {
 
 const updateNumber = () => {
     // passing slider value as counter text
-    document.getElementById('project__num').innerHTML = projects.length;
+    document.getElementById('project__num').innerHTML = `+ ${projects.length}`;
 }
 
 updateNumber();
