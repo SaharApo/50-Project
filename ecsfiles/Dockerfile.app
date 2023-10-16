@@ -61,8 +61,8 @@ RUN echo "here:$SecretsManager_ACCESS"
 
 RUN npm install -g @socket.io/pm2
 
-ENV PM2_PUBLIC_KEY nd7kiqiar58t5dm
-ENV PM2_SECRET_KEY ty17o97kplwwug1
+#ENV PM2_PUBLIC_KEY nd7kiqiar58t5dm
+#ENV PM2_SECRET_KEY ty17o97kplwwug1
 
 EXPOSE 80 3000 22
 
