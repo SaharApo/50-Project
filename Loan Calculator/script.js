@@ -50,7 +50,7 @@ function calculateCharge() {
 
 function updateMotivation() {
     var today = new Date();
-    var saharBirthday = new Date('2024-06-01');
+    var saharBirthday = new Date('2024-01-06'); // Updated birthday
     var diffInTime = saharBirthday.getTime() - today.getTime();
     var diffInDays = Math.ceil(diffInTime / (1000 * 3600 * 24));
 
@@ -62,6 +62,7 @@ function updateMotivation() {
         "Almost there! A little more effort to make Sahar's birthday special!";
     document.getElementById('motivation').innerHTML = motivationText;
 }
+
 
 window.onload = function() {
     updateMotivation();
