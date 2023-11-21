@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Loan Repayment Calculator</title>
+</head>
+
+<body>
+
+<div id="progressBarContainer">
+    <div id="progressBar">0%</div>
+</div>
+
+<h1>Loan Repayment Calculator</h1>
+<p>Enter your remaining loan amount and see how much you need to charge to finish the loan before Sahar's birthday on June 1, 2024!</p>
+
+<input type="number" id="remainingAmount" placeholder="Enter Remaining Amount">
+<button onclick="calculateCharge()">Calculate</button>
+
+<h2>Total Amount to Charge: <span id="result"></span></h2>
+
+<div id="countdown"></div>
+<div id="motivation"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
